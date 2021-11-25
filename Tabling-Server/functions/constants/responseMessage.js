@@ -30,6 +30,10 @@ module.exports = {
     DELETE_ONE_POST_SUCCESS: '포스트 삭제 성공',
     NO_POST: '존재하지 않는 포스트입니다.',
 
+    // 카페
+    READ_ALL_CAFES_SUCCESS: '모든 카페 조회 성공',
+    RESERVE_CAFE_SUCCESS: '카페 예약 변경 성공',
+    
     // 서버 내 오류
     INTERNAL_SERVER_ERROR: '서버 내 오류',
 
