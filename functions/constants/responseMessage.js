@@ -40,4 +40,7 @@ module.exports = {
 
     // 상세정보 조희
     READ_RESTAURANT_SUCCESS: '조회 성공 🧸',
+
+    // 좋아요
+    UPDATE_LIKE_SUCCESS: '조아요 성공 💛',
 };
