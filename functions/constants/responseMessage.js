@@ -37,4 +37,7 @@ module.exports = {
     TOKEN_EXPIRED: '토큰이 만료되었습니다.',
     TOKEN_INVALID: '토큰이 유효하지 않습니다.',
     TOKEN_EMPTY: '토큰이 없습니다.',
+
+    // 상세정보 조희
+    READ_RESTAURANT_SUCCESS: '조회 성공 🧸',
 };

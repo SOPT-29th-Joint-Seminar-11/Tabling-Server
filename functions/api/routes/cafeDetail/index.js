@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/cafe-detail', require('./cafeDetail'));
+router.get('/:cafeID', require('./cafeDetailGET'));
 
 module.exports = router;
