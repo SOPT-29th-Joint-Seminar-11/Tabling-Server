@@ -11,9 +11,9 @@ module.exports = async (req, res) => {
 
   try {
     client = await db.connect(req);
-    const newPost = await reservationDB.reserveCafe(client, cafeId);
+    const newCafe = await reservationDB.reserveCafe(client, cafeId);
 
-    res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.RESERVE_CAFE_SUCCESS, newPost));
+    res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.RESERVE_CAFE_SUCCESS, newCafe));
   } catch (error) {
     functions.logger.error(`[ERROR] [${req.method.toUpperCase()}] ${req.originalUrl}`, `[CONTENT] ${error}`);
     console.log(error);

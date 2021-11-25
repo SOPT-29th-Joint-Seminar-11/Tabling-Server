@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     client = await db.connect(req);
 
     const cafes = await restaurantDB.getAllCafes(client);
-
+  
     res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.READ_ALL_CAFES_SUCCESS, cafes));
 
   } catch (error) {
