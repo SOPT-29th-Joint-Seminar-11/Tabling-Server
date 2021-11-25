@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
         client = await db.connect(req);
         const like = await likeDB.likeCafe(client, cafeID);
 
-        res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.UPDATE_LIKE_SUCCESS, like));
+        res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.UPDATE_LIKE_SUCCESS));
     } catch (error) {
         functions.logger.error(`[ERROR] [${req.method.toUpperCase()}] ${req.originalUrl}`, `[CONTENT] ${error}`);
         console.log(error);
