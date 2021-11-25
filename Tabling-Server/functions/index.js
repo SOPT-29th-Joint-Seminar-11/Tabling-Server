@@ -1,5 +1,5 @@
 const admin = require("firebase-admin");
-const serviceAccount = require("./joint-seminar-tabling-firebase-adminsdk-g4im5-69afb96a88");
+const serviceAccount = require("./joint-seminar-tabling-firebase-adminsdk-g4im5-69afb96a88.json");
 const dotenv = require("dotenv");
 
 dotenv.config();
