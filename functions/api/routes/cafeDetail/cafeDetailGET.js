@@ -23,10 +23,11 @@ module.exports = async (req, res) => {
     // 빌려온 connection을 사용해 우리가 db/[파일].js에서 미리 정의한 SQL 쿼리문을 날려줍니다.
 
     const info = await restaurantDB.getCafeInfo(client, cafeID);
-    const likeCount = await likeDB.getLikeCount(client, cafeID);
+    const likeInfo = await likeDB.getLikeInfo(client, cafeID);
     const imageArray = info.images.split(",");
     info.images = imageArray;
-    info.likeCount = likeCount.count;
+    info.likeFlag = likeInfo.flag
+    info.likeCount = likeInfo.count;
 
     const detail = await restaurantDB.getCafeDetail(client, cafeID)
     const tagArray = detail.tags.split(",");

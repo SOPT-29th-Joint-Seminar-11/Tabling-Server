@@ -3,7 +3,7 @@ const convertSnakeToCamel = require('../lib/convertSnakeToCamel');
 const getCafeInfo = async (client, cafeID) => {
     const {rows} = await client.query(
         `
-        SELECT images, waiting_count, distance, name, address, rating, review_count, description, like_count FROM restaurant r
+        SELECT images, waiting_count, distance, name, address, rating, review_count, description, like_flag, like_count FROM restaurant r
         WHERE id = $1
         `,
         [cafeID],

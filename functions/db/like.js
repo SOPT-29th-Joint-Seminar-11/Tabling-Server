@@ -1,9 +1,9 @@
 const convertSnakeToCamel = require('../lib/convertSnakeToCamel');
 
-const getLikeCount = async (client, cafeID) => {
+const getLikeInfo = async (client, cafeID) => {
     const { rows } = await client.query(
         `
-        SELECT count FROM "like"
+        SELECT flag, count FROM "like"
         WHERE restaurant_id = $1
         `,
         [cafeID],
@@ -34,4 +34,4 @@ const likeCafe = async (client, cafeID) => {
     return convertSnakeToCamel.keysToCamel(rows[0]);
 };
 
-module.exports = { getLikeCount, likeCafe }
+module.exports = { getLikeInfo, likeCafe }
