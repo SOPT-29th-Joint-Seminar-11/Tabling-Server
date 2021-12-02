@@ -43,4 +43,8 @@ module.exports = {
 
     // 좋아요
     UPDATE_LIKE_SUCCESS: '조아요 성공 💛',
+
+    // 카페
+    READ_ALL_CAFES_SUCCESS: '모든 카페 조회 성공',
+    RESERVE_CAFE_SUCCESS: '카페 예약 변경 성공',
 };
